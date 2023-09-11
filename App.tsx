@@ -12,7 +12,12 @@ const App = ()=>{
   return(
     <View style={styles.container}>
       <Text style={styles.text}>Enter Passcode</Text>
-      <Text style={styles.errorText}>Wrong Passcode</Text>
+      <View style={styles.pinContainer}>
+        <View style={styles.pinDot}></View>
+        <View style={styles.pinDot}></View>
+        <View style={styles.pinDot}></View>
+        <View style={styles.pinDot}></View>
+      </View>
     </View>
   )
 }
@@ -27,7 +32,8 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: 'Roboto',
     fontSize: 20,
-    color:'#5A7FD6'
+    color:'#5A7FD6',
+    marginBottom:10,
   },
   errorText:{
     fontFamily: 'Roboto',
@@ -37,6 +43,21 @@ const styles = StyleSheet.create({
   pinContainer:{
     marginBottom:12,
     flexDirection:'row'
+  },
+  pinDot:{
+    width: 20,
+    height:20,
+    borderRadius:10,
+    marginHorizontal:10,
+    backgroundColor:'#5A7FD6',
+    
+  },
+  dotFilled:{
+    width: 20,
+    height:20,
+    borderRadius:10,
+    marginHorizontal:10,
+    backgroundColor:' #E15646'
   },
 
 })
