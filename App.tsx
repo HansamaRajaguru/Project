@@ -13,10 +13,10 @@ const App = ()=>{
     <View style={styles.container}>
       <Text style={styles.text}>Enter Passcode</Text>
       <View style={styles.pinContainer}>
-        <View style={styles.pinDot}></View>
-        <View style={styles.pinDot}></View>
-        <View style={styles.pinDot}></View>
-        <View style={styles.pinDot}></View>
+        const count=4;
+        for (let index = 0; index < count; index++) {
+          <View style={styles.pinDot}></View>
+        }
       </View>
     </View>
   )
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: 'Roboto',
-    fontSize: 20,
+    fontSize: 24,
     color:'#5A7FD6',
     marginBottom:10,
   },
@@ -45,19 +45,20 @@ const styles = StyleSheet.create({
     flexDirection:'row'
   },
   pinDot:{
-    width: 20,
-    height:20,
-    borderRadius:10,
+    width: 17,
+    height:17,
+    borderRadius:8,
     marginHorizontal:10,
-    backgroundColor:'#5A7FD6',
-    
+    backgroundColor:'white',
+    borderWidth:2,
+    borderColor:'#5A7FD6'
   },
   dotFilled:{
-    width: 20,
-    height:20,
-    borderRadius:10,
+    width: 17,
+    height:17,
+    borderRadius:8,
     marginHorizontal:10,
-    backgroundColor:' #E15646'
+    backgroundColor:'#E15646'
   },
 
 })
